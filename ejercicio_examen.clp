@@ -8,8 +8,9 @@
 ?aux <-(robot palet $?list1 ?fruta ?num1 $?list2 linea pedido $?list3 ?fruta ?num2 $?list4)
 (carga maxima ?max)
 (pedido naranjas ?obj1 manzanas ?obj2 caquis ?obj3 uvas ?obj4)
+(integerp ?num1)
 (test(> ?num1 0))
-(test(eq TRUE (stringp ?fruta)))
+
 =>
 (retract ?aux)
 (assert (robot palet $?list1 ?fruta 0 $?list2 linea pedido $?list3 ?fruta ?num1 $?list4))
